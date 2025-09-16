@@ -1,8 +1,8 @@
 # Projeto Forms_Superbase
-Formulário de cadastro para implementação em um banco de dados relacional.
+Formulário de cadastro para implementação no banco de dados relacional supabase.
 
 # Tecnologias utilizadas:
-HTML, CSS E JAVASCRIPT.
+HTML, CSS E JAVASCRIPT, FONTAWESOME,SWEETALERT, BOOTSTRAP.
 
 # Banco de Dados utilizado:
 Supabase.
