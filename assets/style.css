@@ -38,6 +38,21 @@ footer {
    transform: translate(-50%, -50%);
 }
 
+.form{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.form-section-input{
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+
+}
+
 
 footer {
    text-align: center;
