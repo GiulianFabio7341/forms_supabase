@@ -14,42 +14,43 @@ header {
 }
 
 main {
-   flex: 1; /* ocupa todo o espaço disponível */
+   flex: 1;
+   /* ocupa todo o espaço disponível */
    display: flex;
-   justify-content: center; /* centraliza horizontal */
-   align-items: center;     /* centraliza vertical */
+   justify-content: center;
+   /* centraliza horizontal */
+   align-items: center;
+   /* centraliza vertical */
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-
-
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   text-align: center;
 }
 
 
-.feedback button {
+.inscreva button {
    position: fixed;
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
 }
 
-.form{
+.form {
    display: flex;
    flex-direction: column;
    justify-content: space-between;
    align-items: center;
 }
 
-.form-section-input{
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-align-items: center;
+.form-section-input {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
 
 }
 
