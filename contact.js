@@ -91,7 +91,7 @@ async function view() {
 
     // Monta meu html
     let html = `
-      <table border="1"  class="mt-4" cellpadding="8" cellspacing="0" style="border-collapse:collapse; width:100%; text-align:left;">
+      <table border="1"  class="tabela-networking  mt-4" cellpadding="8" cellspacing="0" style="border-collapse:collapse; width:50vw; text-align:left;">
         <thead>
           <tr>
             <th>Nome</th>

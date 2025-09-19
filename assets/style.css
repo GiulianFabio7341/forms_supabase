@@ -60,8 +60,15 @@ footer {
    display: flex !important;
    flex-direction: column !important;
    align-items: center;
-   margin: 10px;
   }
+
+  main div button{
+  margin: 10px;
+  width: 50vw;
+  }
+
+  .tabela-networking {
+  width: 50px;
 }
 
 footer {
