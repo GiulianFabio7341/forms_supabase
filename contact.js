@@ -107,11 +107,12 @@ async function view() {
     data.forEach(item => {
       html += `
         <tr>
-          <td>${item.nome || ''}</td>
-          <td>${item.email || ''}</td>
-          <td>${item.git || ''}</td>
-          <td>${item.cidade || ''}</td>
-          <td>${item.projeto_principal || ''}</td>
+          <td> ${item.nome || 'Não inseriu'}</td>
+          <td>${item.email || 'Não inseriu'}</td>
+          <td>${item.git || 'Não inseriu'}</td>
+          <td>${item.cidade || 'Não inseriu'}</td>
+          <td><a href="${item.projeto_principal|| 'Não inseriu'}" target="_blank" rel="noopener noreferrer">&#128064;</a></td>
+        
         </tr>
       `;
     });
