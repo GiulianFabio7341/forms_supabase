@@ -85,22 +85,21 @@ async function view() {
   try {
     const { data, error } = await supabase
       .from('networking')
-      .select('*'); // pega todas as colunas
+      .select('*'); 
 
     if (error) throw error;
 
-    // Monta meu html com scroll responsivo
     let html = `
-      <div style="overflow-x:auto; max-width:100%;">
-        <table border="1" class="tabela-networking mt-4" cellpadding="8" 
-          style="border-collapse:collapse; text-align:center; width:100%; min-width:600px;">
+      <div style="overflow-x:auto; width:100%; display:block;">
+        <table border="1" class="tabela-networking mt-4" cellpadding="8"
+          style="border-collapse:collapse; text-align:center; min-width:1100px; table-layout:auto;">
           <thead>
             <tr>
-              <th>Nome</th>
-              <th>Email</th>
-              <th>GitHub</th>
-              <th>Cidade</th>
-              <th>Projeto Principal</th>
+              <th style="min-width:200px;">Nome</th>
+              <th style="min-width:250px;">Email</th>
+              <th style="min-width:200px;">GitHub</th>
+              <th style="min-width:150px;">Cidade</th>
+              <th style="min-width:250px;">Projeto Principal</th>
             </tr>
           </thead>
           <tbody>
@@ -128,11 +127,13 @@ async function view() {
       </div>
     `;
 
-    // Joga na div
     document.getElementById("tabela-networking").innerHTML = html;
 
   } catch (error) {
     console.error("Erro ao buscar dados:", error.message);
-    document.getElementById("tabela-networking").innerHTML = `<p style="color:red;">Erro ao carregar dados.</p>`;
+    document.getElementById("tabela-networking").innerHTML =
+      `<p style="color:red;">Erro ao carregar dados.</p>`;
   }
 }
+
+
