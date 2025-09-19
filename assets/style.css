@@ -67,8 +67,6 @@ footer {
   width: 50vw;
   }
 
-  .tabela-networking {
-  width: 50px;
 }
 
 footer {
@@ -76,4 +74,8 @@ footer {
    padding: 10px 0;
    font-size: 0.9rem;
    background: transparent;
+}
+
+ .tabela-networking {
+  width: 50vw !important;
 }
