@@ -17,6 +17,9 @@ R: A IA apenas foi usada para puxar os dados.
 .Tempo de conclusão do projeto?
 R:5 dias.
 
+.Postou o deploy?
+R:https://forms-supabase-kohl.vercel.app/
+
 
 # Objetivo do projeto:
 Analisar possibilidades de armazenamento em núvem e alternativas para banco de dados relacionais sem necessidade de instalação de módulos, uso de node ou algum servidor local.
