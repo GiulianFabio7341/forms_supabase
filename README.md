@@ -8,17 +8,17 @@ HTML, CSS E JAVASCRIPT, SWEETALERT, BOOTSTRAP.
 Supabase.
 
 # Dúvidas frequentes:
-.Existe um limte para o cadastro no supabase?
-R: Sim, porém o limite é de 50.000 usuários mensais e tamanho de 500 MB.
+.Existe um limte para o cadastro no supabase?\
+R: Sim, porém o limite é de 50.000 usuários mensais e tamanho de 500 MB.\
 
-.Usei alguma IA para o projeto? 
-R: A IA apenas foi usada para puxar os dados.
+.Usei alguma IA para o projeto? \
+R: A IA apenas foi usada para puxar os dados.\
 
-.Tempo de conclusão do projeto?
-R:5 dias.
+.Tempo de conclusão do projeto?\
+R:5 dias.\
 
-.Postou o deploy?
-R:https://forms-supabase-kohl.vercel.app/
+.Postou o deploy?\
+R:https://forms-supabase-kohl.vercel.app/ \
 
 
 # Objetivo do projeto:
