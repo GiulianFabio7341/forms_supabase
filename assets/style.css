@@ -76,3 +76,31 @@ footer {
    background: transparent;
 }
 
+#tabela-wrapper {
+  overflow-x: auto;
+  width: 100%;
+  max-width: 100vw;
+}
+
+.tabela-networking {
+  width: 100%;
+  table-layout: auto;
+  font-size: 14px;
+}
+
+.tabela-networking th,
+.tabela-networking td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media only screen and (max-width: 600px) {
+  .tabela-networking th,
+  .tabela-networking td {
+    font-size: 12px;
+    padding: 4px;
+  }
+}

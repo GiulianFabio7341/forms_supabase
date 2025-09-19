@@ -80,7 +80,7 @@ function contact() {
   });
 }
 
-// ========== Função de Visualização ==========
+// Função de cadastro
 async function view() {
   try {
     const { data, error } = await supabase
@@ -90,29 +90,30 @@ async function view() {
     if (error) throw error;
 
     let html = `
-      <div style="overflow-x:auto; width:100%; display:block;">
-        <table border="1" class="tabela-networking mt-4" cellpadding="8"
-          style="border-collapse:collapse; text-align:center; min-width:1100px; table-layout:auto;">
-          <thead>
-            <tr>
-              <th style="min-width:200px;">Nome</th>
-              <th style="min-width:250px;">Email</th>
-              <th style="min-width:200px;">GitHub</th>
-              <th style="min-width:150px;">Cidade</th>
-              <th style="min-width:250px;">Projeto Principal</th>
-            </tr>
-          </thead>
-          <tbody>
+      <div id="tabela-wrapper" style="overflow-x: auto; width: 100%; padding: 10px; box-sizing: border-box; max-width: 100vw;">
+        <div style="display: block; width: 100%;">
+          <table border="1" class="tabela-networking mt-4" cellpadding="8"
+            style="border-collapse: collapse; text-align: center; width: 100%; table-layout: auto; font-size: 14px; margin: 0 auto;">
+            <thead>
+              <tr>
+                <th style="max-width: 120px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Nome</th>
+                <th style="max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Email</th>
+                <th style="max-width: 120px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">GitHub</th>
+                <th style="max-width: 80px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Cidade</th>
+                <th style="max-width: 80px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Projeto Principal</th>
+              </tr>
+            </thead>
+            <tbody>
     `;
 
     data.forEach(item => {
       html += `
         <tr>
-          <td>${item.nome || 'Não inseriu'}</td>
-          <td>${item.email || 'Não inseriu'}</td>
-          <td>${item.git || 'Não inseriu'}</td>
-          <td>${item.cidade || 'Não inseriu'}</td>
-          <td>
+          <td style="max-width: 120px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${item.nome || 'Não inseriu'}</td>
+          <td style="max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${item.email || 'Não inseriu'}</td>
+          <td style="max-width: 120px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${item.git || 'Não inseriu'}</td>
+          <td style="max-width: 80px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${item.cidade || 'Não inseriu'}</td>
+          <td style="max-width: 80px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
             <a href="${item.projeto_principal || '#'}" target="_blank" rel="noopener noreferrer">
               &#128064;
             </a>
@@ -122,8 +123,9 @@ async function view() {
     });
 
     html += `
-          </tbody>
-        </table>
+            </tbody>
+          </table>
+        </div>
       </div>
     `;
 
@@ -135,5 +137,3 @@ async function view() {
       `<p style="color:red;">Erro ao carregar dados.</p>`;
   }
 }
-
-
