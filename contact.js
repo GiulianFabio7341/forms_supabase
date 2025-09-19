@@ -89,35 +89,44 @@ async function view() {
 
     if (error) throw error;
 
-    // Monta meu html
+    // Monta meu html com scroll responsivo
     let html = `
-      <table border="1"  class="tabela-networking  mt-4" cellpadding="8" cellspacing="0" style="border-collapse:collapse;  text-align:left;">
-        <thead>
-          <tr>
-            <th>Nome</th>
-            <th>Email</th>
-            <th>GitHub</th>
-            <th>Cidade</th>
-            <th>Projeto Principal</th>
-          </tr>
-        </thead>
-        <tbody>
+      <div style="overflow-x:auto; max-width:100%;">
+        <table border="1" class="tabela-networking mt-4" cellpadding="8" 
+          style="border-collapse:collapse; text-align:center; width:100%; min-width:600px;">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Email</th>
+              <th>GitHub</th>
+              <th>Cidade</th>
+              <th>Projeto Principal</th>
+            </tr>
+          </thead>
+          <tbody>
     `;
 
     data.forEach(item => {
       html += `
         <tr>
-          <td> ${item.nome || 'Não inseriu'}</td>
+          <td>${item.nome || 'Não inseriu'}</td>
           <td>${item.email || 'Não inseriu'}</td>
           <td>${item.git || 'Não inseriu'}</td>
           <td>${item.cidade || 'Não inseriu'}</td>
-          <td><a href="${item.projeto_principal|| 'Não inseriu'}" target="_blank" rel="noopener noreferrer">&#128064;</a></td>
-        
+          <td>
+            <a href="${item.projeto_principal || '#'}" target="_blank" rel="noopener noreferrer">
+              &#128064;
+            </a>
+          </td>
         </tr>
       `;
     });
 
-    html += `</tbody></table>`;
+    html += `
+          </tbody>
+        </table>
+      </div>
+    `;
 
     // Joga na div
     document.getElementById("tabela-networking").innerHTML = html;
